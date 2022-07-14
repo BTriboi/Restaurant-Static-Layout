@@ -1,16 +1,17 @@
-
 /* GLOBAL SYLES */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
 
-/* html {
+html {
     box-sizing: border-box;
-} */
+}
 
 body{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     margin: 0;
     padding:0;
     background-color: #222;
     color: #fff;
+    position: relative;
 }
 
 ul {
@@ -22,23 +23,186 @@ ul {
 .container {
     max-width: 80%;
     margin: 0 auto;
-}
+};
 
+/* HEADER section styles */
+#header {
+    width: 100%;
+    height: 0;
+    padding-bottom:100%;
+    position: relative;
+    text-align: center;
+    
+}
+/* HEADER section IMAGES styling */
+#header #main-background {
+    position: absolute ;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    filter: brightness(40%)	;
+    z-index: -1;
+}
 
 /* NAVIGATION styles */
 
-header .navigation {
+.navigation {
     display: flex;
     justify-content: space-around;
-    text-transform: uppercase;
+    align-items: center;
+    text-transform: uppercase;    
+    padding-top: 20px;
 }
-
+/* Navigation list */
 .navigation ul {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
 }
-
+/* navigation list items  */
 .navigation ul li {
     margin-right: 20px;
+    font-size: 12px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 500ms ease-out;
+}
+
+/* Navigation list items animation hover */
+.navigation ul li:hover{
+    opacity: 0.65;
+}
+
+
+/* Header main headings and paragraph! */
+
+#header .header-main-text {
+    margin-top: 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 200px;
+    font-family: "Cormorant Garamond", serif;
+}
+
+.header-main-text > * {
+    max-width: 400px;
+    width: 50%;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.header-main-text h1 {
+    font-size: 55px;
+    margin: 0;
+}
+
+.header-main-text p {
+    font-size: 12px;
+}
+
+.main-heading-orange-text{
+    color: #CC3300;
+    filter: brightness(140%);
+    font-weight: 400; 
+}
+
+.main-heading-button-pair{
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.main-heading-button-pair button{
+    max-width: 150px;
+    margin: 5px;
+    width: 100%;
+    height: auto;
+}
+/* VIEW DEMOS orange button styling */
+.buy-theme-button {
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    background-color: rgb(0,0,0,0);
+    cursor: pointer;
+    transition: all 500ms ease-out;
+}
+
+/* header button animation hover */
+
+.main-heading-orange-button{
+    background-color: #CC3300;
+    filter: brightness(140%);
+    border: 1px solid #CC3300;
+    color: #fff;
+    padding: 7px 15px;
+    cursor: pointer;
+}
+
+.main-heading-orange-button:hover  {
+    background-color: rgb(0,0,0,0);
+    color: #CC3300;
+    transition: all 500ms ease-out;
+}
+
+
+/* BUY THEME buttons styling */
+
+.buy-theme-button {
+    border: 2px solid #fff;
+    color: #fff;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 7px 15px;
+    background-color: rgb(0,0,0,0);
+    cursor: pointer;
+    transition: all 500ms ease-out;
+}
+
+/* header button animation hover */
+.buy-theme-button:hover  {
+    background-color: #fff;
+    color: #222;
+}
+
+/* Header section SIDE images lef and right */
+
+#header-section-left-image{
+    width: 34vw;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
+}
+
+#header-section-right-image{
+    position: absolute;
+    width: 34vw;
+    height: auto;
+    bottom: 0;
+    right: 0;
+
+
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 800px) {
+    .header-main-text h1 {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 700px){
+    #header-section-left-image, #header-section-right-image{
+        display: none;
+    }
 }
