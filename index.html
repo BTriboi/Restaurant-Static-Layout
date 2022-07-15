@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/assets/pt-logo.svg">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/3cd7d1e58f.js" crossorigin="anonymous"></script>    
     <title>Restaurant Layout</title>
 </head>
 <body>
@@ -12,7 +14,9 @@
         <img id="main-background" src="assets/mainSectionImage.jpeg" alt=""/>
         
         <nav class="navigation">
-            <a href="index.html"><img src="assets/pt-logo.svg" alt="PatioTime" width="50px" height="50px"/></a>
+            <span class="navigation-span-parent">
+                <a href="index.html" id="main-logo"><img src="assets/pt-logo.svg" alt="PatioTime" width="70px" height="70px"/></a>
+            </span>
             <ul>
                 <li>Home</li>
                 <li>Menus</li>
@@ -20,14 +24,19 @@
                 <li>Blog</li>
                 <li>Shop</li>
             </ul>
-            <button class="buy-theme-button">Buy Theme</button>
+            <span class="navigation-span-parent">
+                <button id="header-buy-button" class="buy-theme-button" >Buy Theme</button>
+                <i id="header-twolines-menu" class="fa-solid fa-grip-lines"></i>
+
+            </span>
+            
         </nav>
 
         <div class="header-main-text">
             <h1>
-                <i>Premium</i>
-                <strong>WordPress</strong> Theme for
-                <span class="main-heading-orange-text"> Restaurant</span>
+                <i class="italic">Premium</i>
+                <strong>WordPress</strong> Theme<span class="italic"> for</span> 
+                <span class="main-heading-orange-text">Restaurant</span>
             </h1>
             <p>Welcome to Patio Time, a modern WordPress theme designed for small restaurants, cafes, bars, bristros, seafood and any food business websites.
             </p>
@@ -41,6 +50,10 @@
          <img id="header-section-right-image" src="assets/intro-right-4.png" alt="">
         
     </header>
+
+    <section class="container">
+
+    </section>
     
     <footer>
 

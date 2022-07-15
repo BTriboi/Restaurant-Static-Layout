@@ -1,7 +1,8 @@
 /* GLOBAL SYLES */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&display=swap');
 
 html {
+    overscroll-behavior: contain;
     box-sizing: border-box;
 }
 
@@ -9,7 +10,7 @@ body{
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     margin: 0;
     padding:0;
-    background-color: #222;
+    background-color: #fff;
     color: #fff;
     position: relative;
 }
@@ -50,8 +51,9 @@ ul {
 /* NAVIGATION styles */
 
 .navigation {
+    position: relative;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     text-transform: uppercase;    
     padding-top: 20px;
@@ -70,6 +72,19 @@ ul {
     cursor: pointer;
     transition: all 500ms ease-out;
 }
+/* Navigation 2 LINES button styles after 700px width and less */
+#header-twolines-menu{
+    color: #fff;
+    display: none;
+    font-size: 25px;
+    right: 0;
+    transition: all 500ms ease-out;
+    cursor: pointer;
+}
+
+#header-twolines-menu:hover {
+    opacity: 0.7;
+}
 
 /* Navigation list items animation hover */
 .navigation ul li:hover{
@@ -80,7 +95,7 @@ ul {
 /* Header main headings and paragraph! */
 
 #header .header-main-text {
-    margin-top: 7rem;
+    padding: 7rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -90,8 +105,8 @@ ul {
 }
 
 .header-main-text > * {
-    max-width: 400px;
-    width: 50%;
+    max-width: 600px;
+    min-width: 200px;
     text-align: center;
     padding: 1rem 0;
 }
@@ -101,14 +116,19 @@ ul {
     margin: 0;
 }
 
+.header-main-text h1 .italic {
+    font-weight: 100;
+}
+
 .header-main-text p {
-    font-size: 12px;
+    font-size: 18px;
+
 }
 
 .main-heading-orange-text{
-    color: #CC3300;
+    color: #de5800;
     filter: brightness(140%);
-    font-weight: 400; 
+    font-weight: 700; 
 }
 
 .main-heading-button-pair{
@@ -138,9 +158,9 @@ ul {
 /* header button animation hover */
 
 .main-heading-orange-button{
-    background-color: #CC3300;
+    background-color: #de5800;
     filter: brightness(140%);
-    border: 1px solid #CC3300;
+    border: 1px solid #de5800;
     color: #fff;
     padding: 7px 15px;
     cursor: pointer;
@@ -148,7 +168,7 @@ ul {
 
 .main-heading-orange-button:hover  {
     background-color: rgb(0,0,0,0);
-    color: #CC3300;
+    color: #de5800;
     transition: all 500ms ease-out;
 }
 
@@ -198,6 +218,10 @@ ul {
 @media screen and (max-width: 800px) {
     .header-main-text h1 {
         font-size: 25px;
+        
+    }
+    #header-buy-button {
+        display: none;
     }
 }
 
@@ -205,4 +229,13 @@ ul {
     #header-section-left-image, #header-section-right-image{
         display: none;
     }
+    .navigation ul {
+        display: none;
+    }
+
+    #header-twolines-menu{
+        display:  flex;
+        align-items: center;
+    }
+
 }
