@@ -1,8 +1,9 @@
-/* GLOBAL SYLES */
+/* FONT IMPORTS */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Jost:wght@300;400;500&display=swap');
 
+/* GLOBAL SYLES */
 html {
-    overscroll-behavior: contain;
     box-sizing: border-box;
 }
 
@@ -12,7 +13,7 @@ body{
     padding:0;
     background-color: #fff;
     color: #fff;
-    position: relative;
+    overflow-x: hidden;
 }
 
 ul {
@@ -21,20 +22,25 @@ ul {
 }
 
 
-.container {
-    max-width: 80%;
-    margin: 0 auto;
-};
-
-/* HEADER section styles */
+/* -------------- HEADER section styles --------------- */
 #header {
     width: 100%;
-    height: 0;
-    padding-bottom:100%;
-    position: relative;
+    height: 640px;
     text-align: center;
+    position: relative;
+    background-image: url('assets/main-section/mainSectionImage.jpeg');
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
     
+} 
+
+#header > * {
+    width: 80%;
+    max-width: 1300px;
+    margin: 0 auto;
 }
+
 /* HEADER section IMAGES styling */
 #header #main-background {
     position: absolute ;
@@ -72,6 +78,7 @@ ul {
     cursor: pointer;
     transition: all 500ms ease-out;
 }
+
 /* Navigation 2 LINES button styles after 700px width and less */
 #header-twolines-menu{
     color: #fff;
@@ -213,15 +220,167 @@ ul {
 
 }
 
-/* MEDIA QUERIES */
+/* --------------- KEY FEATURES SECTION -------------- */
+
+.container {
+    width: 80%;
+    max-width: 1400px;
+    margin: 0 auto;
+    font-family: "Jost", sans-serif;
+    text-align: center;
+}
+#key-section {
+    padding: 5rem 0;
+    color: #000;
+    
+}
+
+/* The text above images */
+
+.section-text-box{
+    text-transform: uppercase;
+    max-width: 1450px;
+}
+
+.section-text-box span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #de5800;
+}
+
+.section-text-box span::before{
+    width: 100%;
+    max-width: 100px;
+    height: 1px;
+    background-color: #de5800;
+    content: "";
+}
+
+.section-text-box span::after {
+    width: 100%;
+    max-width: 100px;
+    height: 1px;
+    background-color: #de5800;
+    content: "";
+}
+
+.section-text-box span p {
+    margin: 0 1.5rem;
+    min-width: 230px;
+    font-size: 14px;
+}
+
+
+.section-text-box h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 60px;
+    font-weight: 400;
+}
+
+
+
+/* images and text below the images styling */
+.key-section-grid-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.key-section-grid-box div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.5rem 1rem;
+    flex: 1;
+}
+
+.key-section-grid-box div img {
+    width: 100%;
+    max-width: 350px;
+    height: 204px;
+    object-fit: contain;
+
+}
+
+/* ------------------ DEMO IMPORT SECTION -------------------- */
+
+#demo-section {
+    color: #000;
+    background-color: #fbf6f2;
+    text-align: center;
+    padding: 5rem 0;
+    font-family: "Jost", sans-serif;
+
+}
+
+#demo-section > * {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+/* images boxes styling */
+
+.demo-section-grid-box {
+    display: grid;
+    max-width: 1000px;
+    padding-top: 1.2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 2rem;
+    justify-content: center;
+
+}
+
+.demo-section-grid-box div {
+    display: grid;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex: 1;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.demo-section-grid-box div img {
+    box-shadow: 12px 15px 20px rgb(0,0,0,0.2);
+    margin-bottom: 0.7rem;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: contain;
+    transition: all 500ms ease-out;
+}
+
+/* hover cursor on image */
+.demo-section-grid-box div:hover img {
+    transform: scale(1.01);
+    opacity: 0.7;
+}
+
+
+/* ------------------ MEDIA QUERIES -------------------- */
+
 
 @media screen and (max-width: 800px) {
-    .header-main-text h1 {
+    .header-main-text h1, .section-text-box h1 {
         font-size: 25px;
         
     }
     #header-buy-button {
         display: none;
+    }
+
+    .key-section-grid-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .key-section-grid-box div img{
+        max-width: 100%;
+        height: 100%;
     }
 }
 
