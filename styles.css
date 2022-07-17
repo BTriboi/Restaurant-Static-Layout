@@ -619,11 +619,15 @@ ul {
     max-width: 1000px;
     margin: 0 auto;
     gap: 1rem;
+    cursor: pointer;
 }
 
-.inner-section-images-box #images-list:last-child:hover {
+.inner-section-images-box #images-list li {
+    transition: all 500ms ease-out;
+}
+.inner-section-images-box #images-list li:hover {
     opacity: 0.7;
-    cursor: pointer;
+    transform: scale(1.03);
 }
 .inner-section-images-box #dots-list li {
     border: 1px solid #fff;
