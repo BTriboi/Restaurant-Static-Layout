@@ -5,6 +5,7 @@
 /* ------------------ GLOBAL SYLES ------------------*/
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -129,6 +130,11 @@ ul {
     font-weight: 400;
     cursor: pointer;
     transition: all 500ms ease-out;
+}
+
+.navigation ul li a {
+    color: #fff;
+    text-decoration: none;
 }
 
 /* Navigation 2 LINES button styles after 700px width and less */
